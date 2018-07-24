@@ -211,6 +211,8 @@ end
 def winning_team
  players=game_hash.values.map do |team_data|
     team_data[:players]
- players.reduce do 
+ players.map do |array|
+   array.reduce do |sum,points|
+     
   
   
