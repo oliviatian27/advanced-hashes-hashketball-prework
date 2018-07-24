@@ -234,5 +234,12 @@ end
 
 def long_name_steals_a_ton?
   name=player_with_longest_name
-  
+  players = get_all_players
+  result= players.reduce do |result,player_data|
+    if(!result)||result[:player_name].length <player_data[:player_name].length
+      result = player_data
+     end
+    result
+  end
+  result[:player_name]
   
