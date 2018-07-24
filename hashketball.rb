@@ -208,14 +208,15 @@ def most_points_scored
   end
   result[:player_name]
 end
+
 def winning_team
-  points=0
   win={}
  game_hash.values.map do |team_data|
+    points=0
     team_data[:players].each do |players|
      points+= players[:points]
    end
-   win[:team_data[:team_name]]=points
+   win[team_data[:team_name]]=points
  end
  win.key(win.values.max)
  end
