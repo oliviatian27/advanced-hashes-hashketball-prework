@@ -200,7 +200,7 @@ end
 
 def most_points_scored
    players = get_all_players
-   players.reduce do |result,player_data|
+  result= players.reduce do |result,player_data|
     if(!result)||(result[:points]<player_data[:points])
       result = player_data
      end
