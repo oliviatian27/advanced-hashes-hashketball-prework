@@ -209,7 +209,8 @@ def most_points_scored
   result[:player_name]
 end
 def winning_team
-  game_hash.each do |
-    
+ players=game_hash.values.map do |team_data|
+    team_data[:players]
+ players.reduce do 
   
   
