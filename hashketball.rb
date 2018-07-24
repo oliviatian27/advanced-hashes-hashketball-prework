@@ -198,7 +198,7 @@ def big_shoe_rebounds
   biggest_shoe[:rebounds]
 end
 
-ddef most_points_scored
+def most_points_scored
    players = get_all_players
    players.reduce do |result,player_data|
     if(!result)||(result[:points]<player_data[:points])
@@ -206,5 +206,5 @@ ddef most_points_scored
      end
     result
   end
-  
+  result[:player_name]
 end
