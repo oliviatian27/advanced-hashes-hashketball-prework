@@ -213,7 +213,7 @@ def winning_team
     team_data[:players]
  players.map do |array|
      
-   array.reduce do |sum,points|
+   array.reduce do |sum,player|
      sum+=num_points_scored
   
   
