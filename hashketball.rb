@@ -221,5 +221,14 @@ def winning_team
  win.key(win.values.max)
  end
  
-  
+def player_with_longest_name
+    players = get_all_players
+  result= players.reduce do |result,player_data|
+    if(!result)||(result[:points]<player_data[:points])
+      result = player_data
+     end
+    result
+  end
+  result[:player_name]
+end
   
