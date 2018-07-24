@@ -224,7 +224,7 @@ def winning_team
 def player_with_longest_name
     players = get_all_players
   result= players.reduce do |result,player_data|
-    if(!result)||(result[:points]<player_data[:points])
+    if(!result)||result[:player_name].length <player_data[:player_name].length
       result = player_data
      end
     result
