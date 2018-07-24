@@ -232,5 +232,6 @@ def player_with_longest_name
   result[:player_name]
 end
 
-def 
+def long_name_steals_a_ton?
+  
   
